@@ -18,7 +18,7 @@
         
         <% 
         SearchVideoService s = new SearchVideoService();
-        s.findVideoByTitle("thor dark");
+        s.findVideoByYear(2018);
             %>
         
     </body>
