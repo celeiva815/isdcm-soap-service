@@ -11,11 +11,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link rel="stylesheet" href="css/style.css">
+        <title>Servicio SOAP</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        
+        <h1>Bienvenido al servicio de Videos</h1>
+        <p>Este sitio provee una API en SOAP para la búsqueda de videos subidos
+        en el proyecto de la Fase 1. Esperamos que funcione! </p>
         <% 
         SearchVideoService s = new SearchVideoService();
         s.findVideoByYear(2018);

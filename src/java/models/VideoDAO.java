@@ -79,7 +79,7 @@ public class VideoDAO {
         
         Connection connection = MySqlConnector.getInstance().getConnection();
         List<Video> videos = new ArrayList<>();
-        String query = "Select * from videos WHERE Year(created_at) = ?";
+        String query = "Select * from videos WHERE Year(release_date) = ?";
        
         try {
 
@@ -96,7 +96,6 @@ public class VideoDAO {
 
         return videos;
     }
-    
     
     private List<Video> processResult(PreparedStatement pstmt) throws SQLException {
         
@@ -128,6 +127,7 @@ public class VideoDAO {
         video.setDuration(rs.getInt("DURATION"));
         video.setFormat(rs.getString("FORMAT"));
         video.setUrl(rs.getString("URL"));
+        video.setReleaseDate(rs.getDate("RELEASE_DATE"));
         video.setUserId(rs.getInt("USER_ID"));
 
         return video;

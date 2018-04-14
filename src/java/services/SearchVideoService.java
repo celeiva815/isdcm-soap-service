@@ -10,8 +10,8 @@ import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.ejb.Stateless;
-import models.Video;
 import models.VideoDAO;
+import models.Video;
 
 /**
  *

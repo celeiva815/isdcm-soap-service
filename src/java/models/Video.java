@@ -18,7 +18,8 @@ public class Video implements Serializable {
     private String title;
     private String author;
     private String description;
-    private Date createdAt;
+    private Date createdAt;    
+    private Date releaseDate;
     private Integer reproductions;
     private Integer duration;
     private String format;
@@ -124,5 +125,14 @@ public class Video implements Serializable {
 
     public void setVideoscol(String videoscol) {
         this.videoscol = videoscol;
+    }
+
+    public void setReleaseDate(Date date) {
+        this.releaseDate = date;
+    }
+    
+    public Date getReleaseDate() {
+        
+        return this.releaseDate;
     }
 }
